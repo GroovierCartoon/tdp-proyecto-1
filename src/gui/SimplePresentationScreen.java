@@ -172,7 +172,7 @@ public class SimplePresentationScreen extends JFrame {
 		mailText.setText(studentData.getMail());
 		URLText.setText(studentData.getGithubURL());
 		
-		ImageIcon myPicture = new ImageIcon(studentData.getPathPhoto());
+		ImageIcon myPicture = new ImageIcon(this.getClass().getResource(studentData.getPathPhoto()));
 		imageLbl.setIcon(myPicture);
 		DateTimeFormatter date = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDateTime localDate = LocalDateTime.now();
